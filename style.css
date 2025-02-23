@@ -1,0 +1,135 @@
+h1{text-align: center;
+}
+
+.bigContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px black solid;
+    margin-bottom: 30px;
+}
+
+.bigContainer > div{
+    border: 1px black solid;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+/*CALCULADORA*/
+.PAG2{
+    background-image: url(https://static9.depositphotos.com/1452420/1150/v/450/depositphotos_11504224-stock-illustration-math-background.jpg);
+}
+
+
+.contenCalculadora {
+    border: solid black 5px;
+    border-radius: 5%;
+    padding: 10px;
+    width: 350px;
+    height: 490px;
+    margin: 10% auto;
+    display: grid;
+    grid-template-areas: 
+        "a a a a"
+        "pantalla pantalla pantalla pantalla"
+        "c dividir multiplicar borrar"
+        "siete ocho nueve restar"
+        "cuatro cinco seis sumar"
+        "uno dos tres igual"
+        "cero cero punto igual";
+    grid-template-rows: auto 1fr repeat(6, 67px);
+    gap: 6px;
+    background-color:rgb(229, 224, 224);
+}
+
+
+.pantalla{
+   grid-area: pantalla;
+   display: flex;
+   align-items: center;
+   justify-content: end; 
+   text-align: right;
+   font-size: 2.5rem;
+   padding: 8px 10px;
+   background-color: white;
+   border: solid rgba(0, 0, 0, 0.524) 2px;
+   background-color: #dddfe4bd;
+}
+
+#c {grid-area: c;background-color: #14fc3765;}
+#borrar { grid-area: borrar; background-color: #14fc3765;}
+#dividir { grid-area: dividir; background-color: #14fc3765;}
+#multiplicar { grid-area: multiplicar;background-color: #14fc3765; }
+#restar { grid-area: restar; background-color: #14fc3765;}
+#sumar { grid-area: sumar; background-color: #14fc3765;}
+#igual { grid-area: igual;background-color: #14fc37;}
+#cero { grid-area: cero; }
+#punto { grid-area: punto; }
+#siete { grid-area: siete; }
+#ocho { grid-area: ocho; }
+#nueve { grid-area: nueve; }
+#cuatro { grid-area: cuatro; }
+#cinco { grid-area: cinco; }
+#seis { grid-area: seis; }
+#uno { grid-area: uno; }
+#dos { grid-area: dos; }
+#tres { grid-area: tres; }
+
+.btn{ 
+    border-radius: 15%;
+    font-size: 1.5rem;
+    background-color: rgba(245, 222, 179, 0.564);
+    cursor: pointer;
+    border: solid 0.2px rgba(0, 0, 0, 0.341);
+}
+
+#c:hover{
+    color: red;
+    border: solid 1px red;
+
+}
+
+#borrar:hover{
+    color: red;
+    border: solid 1px red;
+
+}
+
+.btn:hover{
+    border: solid 1px black;
+}
+
+.marca{
+    grid-area: a;
+    text-align: center;
+    font-size: 2rem;
+    margin: 8px 0px;
+}
+
+#botonCalculadora{
+    background-color: #14fc378e;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+#botonCalculadora:hover{
+    border: solid .5px;
+}
+
+
+#Form9 > input{
+    width: 140px;
+}
+
+
+#Form9 >label{
+    display: block;
+    text-align: start;
+    margin: 5px 0px;
+}
