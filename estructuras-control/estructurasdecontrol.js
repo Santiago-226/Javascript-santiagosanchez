@@ -124,7 +124,7 @@ switch (dia) {
 }
 
 
-
+*/
 
 //Ejercicios - Estructuras de control en JavaScript
 
@@ -140,6 +140,9 @@ if(notaPromedio >= 6){
 }else{
   alert("REPROBASTE EL CURSO")
 }
+
+/*3
+
 
 //ACTIVIDAD 4
 let num1 = parseInt(prompt("INGRESE EL PRIMER NUMERO"));
@@ -201,24 +204,90 @@ if(horasTrabajadas <=40){
   let salarioSemanal = horasTrabajadas * 20000;
   alert("ESTA SEMANA GANASTE $" + salarioSemanal)
 }
-*/
+
 
 //ACTIVIDAD 10
 let cantidadCamisas = parseInt(prompt("¿CUANTAS CAMISAS COMPRASTE"));
 let valorTotal = 0;
-let valorPagar = 0;
 
-for(i=0; i < cantidadCamisas; i++){
-  valorPrenda = parseInt(prompt("INGRESA EL VALOR DE LA PRENDA "+ (i+1)));
+for(i= 0; i < cantidadCamisas; i++){
+  let valorPrenda = parseInt(prompt("INGRESA EL VALOR DE LA PRENDA "+ (i+1)));
   if(!isNaN(valorPrenda)){
     valorTotal += valorPrenda;
   }
 }
 
 if(cantidadCamisas >= 3){
-  valorPagar = valorTotal * 0.8;
+  let valorPagar = valorTotal * 0.8;
+  console.log("El valor a pagar es: $" + valorPagar)
 }else if(cantidadCamisas<3){
-  valorPagar = valorTotal * 0.9;
+  let valorPagar = valorTotal * 0.9;
+  console.log("El valor a pagar es: $" + valorPagar)
 }
 
-console.log("El valor a pagar es: $" + valorPagar)
+//ACTIVIDAD 12 
+//YA SE HABIA HECHO
+
+
+//ACTIVIDAD 14
+const peso = parseFloat(prompt("INGRESE SU PESO KILOGRAMOS"));
+const estatura = parseFloat(prompt("INGRESE SU ESTATURA EN METROS"));
+
+let indice = peso / (estatura**2)
+
+switch(true){
+  case(indice < 18.5):
+  alert("ESTAS BAJO DE PESO")
+  break
+
+  case (indice >= 18.5 && indice < 25):
+    alert("ESTAS EN UN PESO NORMAL")
+  break
+
+  case (indice >= 25):
+    alert("ESTAS EN SOBREPESO")
+  break
+}
+
+//ACTIVIDAD 16
+let notafinal = parseFloat(prompt("INGRESA TU NOTA FINAL"));
+
+if(notafinal >= 1 && notafinal <= 3.3){
+  alert("TUVISTE UN DESEMPEÑO BAJO")
+}else if(notafinal >= 3.4 && notafinal <= 3.8 ){
+  alert("TUVISTE UN DESEMPEÑO BASICO")
+}else if(notafinal >= 3.9 && notafinal <= 4.4){
+  alert("TUVISTE UN DESEMPEÑO ALTO")
+}else if(notafinal >= 4.5 && notafinal <= 5.0){
+  alert("TUVISTE UN DESEMPEÑO SUPERIOR")
+}else{
+  alert("ERROR ❗ INGRESE UNA NOTA VALIDA")
+}
+
+
+
+//ACTIVIDAD 18
+let numbreIngesado = parseInt(prompt("INGRE UN NUMERO"));
+
+if(numbreIngesado < 10){
+  alert("EL NUMERO INGRESADO ES MENOR QUE 10")
+}else if (numbreIngesado >= 10 && numbreIngesado <= 20){
+  alert("EL NUMERO INGRESADO ESTA ENTRE 10 Y 20")
+}else{
+  alert("EL NUMERO ES MAYOR QUE 20")
+
+
+
+//ACTIVIDAD 20
+let nombre = prompt("INGRESA TU NOMBRE");
+let edad = parseInt(prompt("INGRESA TU EDAD"));
+let esMasculino = confirm("¿Eres hombre? (Aceptar = Sí, Cancelar = No)");
+let genero = esMasculino ? "Masculino" : "Femenino";
+
+if (edad >= 18 && genero === "Masculino"){
+  alert("ERES APTO PARA PRESTAR EL SERVICIO MILITAR")
+}else{
+  alert("NO ERES APTO PARA PRESTAR EL SERVICIO MILITAR")
+}}
+*/
+
